@@ -31,7 +31,7 @@ var renderUnboundPreview = function(thumbnails, params) {
   const featured_height = params.featured ? Discourse.SiteSettings.topic_list_featured_height : false;
   const height = featured_height || category_height || Discourse.SiteSettings.topic_list_thumbnail_height;
   const width = featured_width || category_width || Discourse.SiteSettings.topic_list_thumbnail_width;
-  const style = `object-fit:cover;${attrPrefix}height:${height}px;${attrPrefix}width:${width}px`;
+  const style = `object-fit:fill;${attrPrefix}height:${height}px;${attrPrefix}width:${width}`;
   return '<img class="thumbnail" src="' + url + '" style="' + style + '" />';
 };
 
